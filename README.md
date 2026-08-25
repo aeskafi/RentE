@@ -38,9 +38,46 @@ RentE provides renters with an instant vehicle discovery interface and offers re
 
 ## 📝 Original Design Prompt & Objective
 The platform was built following this core design brief:
-> **Role**: Senior Principal Product Designer and Lead Full-Stack Frontend Engineer.
-> **Objective**: Analyze visual design mockups (Volvo EX30 details, float capsule headers, grid filters sidebar, admin panels) to implement a complete, production-grade responsive UI/UX for a Car Rental Platform.
-> **Branding**: rentE — unified, cohesive system utilizing cobalt/royal blue (`#2563EB`) as primary brand accent, with clean silver-white rounded cards (`rounded-3xl`) and slate bases, transitioning seamlessly between class-based light and dark modes.
+
+```text
+Act as a Senior Principal Product Designer and Lead Full-Stack Frontend Engineer specializing in Next.js (App Router), Tailwind CSS, TypeScript, and modern Map-based interfaces.
+
+### OBJECTIVE
+I want you to analyze the reference images and UI/UX inspirations located in:
+`[ABSOLUTE_PATH_TO_YOUR_DESKTOP_FOLDER]`
+
+Based on that visual audit, design and implement a complete, production-grade, and testable responsive UI/UX for a Car Rental & Fleet Discovery Platform with seamless mobile-first responsiveness.
+
+---
+
+### CORE BUSINESS DOMAIN & KEY FEATURES
+1. **Interactive Dual-Layer Map Discovery**:
+   - **Pickup Ready Vehicles**: Dynamic markers for available cars with real-time popup previews (model, pricing, distance, instant booking trigger).
+   - **Permanent Rental Hubs / Offices (Free Listing Benefit)**: Distinct, persistent markers for physical rental agencies/offices across the city, allowing local business discovery and direct office booking.
+   - **Filter & Search Bar**: Floating/docked search with date/time pickers, car types (EV, SUV, Sedan, Luxury), pickup radius, and hub-vs-individual filters.
+2. **Detail & Booking Flow**:
+   - Vehicle detail drawer/modal with high-res gallery, specs, deposit info, and pickup location directions.
+   - Rental Hub public profile page (showcasing their entire on-site fleet and contact details).
+3. **Mobile-First Responsive Layout**:
+   - Desktop: Side-by-side or split layout (interactive map on the right/center, collapsible list/filters on the left).
+   - Mobile/Tablet: Fullscreen interactive map with bottom-sheet drawer (swipeable cards for nearby cars/hubs), floating action buttons, and a clean mobile navigation bar.
+
+---
+
+### EXECUTION STEPS
+1. **Visual Audit**:
+   - Scan all image files in the provided path.
+   - Extract the design system: Color palette (Primary, Secondary, Accent, Neutral shades), Typography scale, Border radiuses, Shadow elevations, and Component styling patterns.
+2. **Architecture & Project Setup**:
+   - Structure a clean Next.js App Router project structure (`/app`, `/components/ui`, `/components/map`, `/components/cards`, `/hooks`, `/types`, `/lib`).
+   - Setup Tailwind config reflecting the extracted design tokens.
+3. **Component Implementation**:
+   - Implement map integration (using React-Leaflet or Mapbox GL with custom markers and clustering).
+   - Create fully interactive mock states (filtering, selecting a vehicle, viewing a hub, responsive bottom sheets, and tab switching).
+   - Include clear TypeScript definitions and realistic mock data (at least 10+ vehicles across multiple rental hubs).
+
+Please start by summarizing the visual guidelines you extracted from the folder, and then proceed directly into building and organizing the codebase.
+```
 
 ---
 
