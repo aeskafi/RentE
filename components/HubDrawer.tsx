@@ -1,7 +1,7 @@
 'use client';
 
 import { RentalHub, Vehicle } from '@/types';
-import { X, Star, MapPin, Phone, Mail, Car, Users, Gauge, Zap } from 'lucide-react';
+import { X, Star, MapPin, Phone, Mail, Car, Users } from 'lucide-react';
 
 interface HubDrawerProps {
   hub: RentalHub | null;

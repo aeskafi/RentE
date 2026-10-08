@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { Vehicle } from '@/types';
 import { Heart, Star, Users, Info, Gauge, Zap } from 'lucide-react';
 import { useState } from 'react';

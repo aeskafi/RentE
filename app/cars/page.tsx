@@ -31,7 +31,10 @@ function CarsListContent() {
   // Sync brand filter from URL if present
   useEffect(() => {
     if (initialBrand && initialBrand !== 'Any') {
-      setSelectedBrand(initialBrand);
+      const timer = setTimeout(() => {
+        setSelectedBrand(initialBrand);
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [initialBrand]);
 
@@ -109,7 +112,7 @@ function CarsListContent() {
               <label className="text-[9px] text-slate-400 font-extrabold uppercase block tracking-wider">Transmission</label>
               <select 
                 value={transmission} 
-                onChange={(e) => setTransmission(e.target.value as any)}
+                onChange={(e) => setTransmission(e.target.value as 'Any' | 'Manual' | 'Automatic')}
                 className="w-full text-slate-800 dark:text-white bg-transparent text-xs font-bold mt-1 focus:outline-hidden cursor-pointer"
               >
                 <option value="Any" className="bg-white dark:bg-slate-900 text-slate-850 dark:text-slate-100">Any</option>
@@ -185,10 +188,10 @@ function CarsListContent() {
             <div className="space-y-2">
               <h4 className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider">Rental Type</h4>
               <div className="flex space-x-1.5 bg-slate-50 dark:bg-slate-950 p-1 rounded-xl">
-                {['any', 'day', 'hour'].map((t) => (
+                {(['any', 'day', 'hour'] as const).map((t) => (
                   <button
                     key={t}
-                    onClick={() => setRentalType(t as any)}
+                    onClick={() => setRentalType(t)}
                     className={`flex-1 py-1.5 text-[10px] font-bold uppercase rounded-lg cursor-pointer transition-all ${
                       rentalType === t
                         ? 'bg-slate-950 text-white dark:bg-white dark:text-slate-950 shadow-xs'

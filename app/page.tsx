@@ -164,7 +164,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-white text-base">Experience driver</h3>
-                  <p className="text-slate-400 dark:text-slate-500 text-xs mt-1 leading-relaxed">Don't have a driver? Don't worry, we have professional drivers available at any time.</p>
+                  <p className="text-slate-400 dark:text-slate-500 text-xs mt-1 leading-relaxed">Don&apos;t have a driver? Don&apos;t worry, we have professional drivers available at any time.</p>
                 </div>
               </div>
 
@@ -360,7 +360,7 @@ export default function Home() {
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-500 text-amber-550" />)}
               </div>
               <p className="text-sm text-slate-500 dark:text-slate-405 leading-relaxed italic">
-                "Renting from RentE was a fantastic experience. The booking was confirmed instantly and the Volvo EX30 was delivered in immaculate condition right to my hotel lobby. Highly recommend their seamless service!"
+                &quot;Renting from RentE was a fantastic experience. The booking was confirmed instantly and the Volvo EX30 was delivered in immaculate condition right to my hotel lobby. Highly recommend their seamless service!&quot;
               </p>
             </div>
             <div className="flex items-center space-x-3.5 mt-8 border-t border-slate-50 dark:border-slate-850 pt-6">
@@ -380,7 +380,7 @@ export default function Home() {
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-500 text-amber-550" />)}
               </div>
               <p className="text-sm text-slate-500 dark:text-slate-405 leading-relaxed italic">
-                "As a driving enthusiast, being able to rent a Porsche 911 Carrera GTS for a weekend cruise down the coast was a dream come true. The process was direct, transparent, and absolutely stress-free."
+                &quot;As a driving enthusiast, being able to rent a Porsche 911 Carrera GTS for a weekend cruise down the coast was a dream come true. The process was direct, transparent, and absolutely stress-free.&quot;
               </p>
             </div>
             <div className="flex items-center space-x-3.5 mt-8 border-t border-slate-50 dark:border-slate-850 pt-6">

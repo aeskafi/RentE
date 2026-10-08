@@ -26,7 +26,10 @@ export default function Navbar() {
   // Initialize theme from HTML class
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
-    setDarkMode(isDark);
+    const timer = setTimeout(() => {
+      setDarkMode(isDark);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const toggleTheme = () => {

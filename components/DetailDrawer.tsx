@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Vehicle, RentalHub } from '@/types';
-import { X, Star, Calendar, ShieldCheck, Check, AlertCircle, MapPin, Navigation, Compass } from 'lucide-react';
+import { X, ShieldCheck, Check, MapPin, Navigation, Compass } from 'lucide-react';
 
 interface DetailDrawerProps {
   vehicle: Vehicle | null;
@@ -28,9 +28,12 @@ export default function DetailDrawer({
 
   // Reset booking step when vehicle changes
   useEffect(() => {
-    setBookingStep('details');
-    setBookingProgress(0);
-    setActiveImageIndex(0);
+    const timer = setTimeout(() => {
+      setBookingStep('details');
+      setBookingProgress(0);
+      setActiveImageIndex(0);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [vehicle]);
 
   if (!vehicle) return null;
@@ -401,7 +404,7 @@ export default function DetailDrawer({
                     <Check className="w-8 h-8 stroke-[3]" />
                   </div>
                   <h3 className="text-xl font-black text-emerald-800 dark:text-emerald-450">Booking Confirmed!</h3>
-                  <p className="text-xs text-emerald-700 dark:text-emerald-400 font-medium">Your trip is locked in. Let's hit the road.</p>
+                  <p className="text-xs text-emerald-700 dark:text-emerald-400 font-medium">Your trip is locked in. Let&apos;s hit the road.</p>
                 </div>
 
                 {/* Pickup Directions / Hub Card */}
